@@ -18,7 +18,7 @@ function numberOfOccurencesInText(word, text) {
     const textArray = text.split("");
     let wordCount = 0;
     textArray.forEach(function(element) {
-        if (word.toLowerCase() === element.toLowerCase()) {
+        if (element.toLowerCase(). includes(word.toLowerCase())) {
         wordCount++;
         }
     });
@@ -31,3 +31,26 @@ function includesRarestLetter(word) {
     }
     return false;
 }
+
+function omitWord(sentence, word) {
+    // split the sentence into an array of words
+const words = sentence.split(" ");
+
+// filter out the specified word
+const filteredWords = words.filter((w) => w !== word);
+
+// Join the filtered words back into a sentence
+const omittedSentence = filteredWords.join(" ");
+
+return omittedSentence;
+
+}
+
+
+// UI Logic
+
+const sentence=  "zoinks! the quick brown fox jumps over the lazy dog"
+const wordToOmit = "zoinks!";
+
+const result = omitWord(sentence, wordToOmit);
+console.log(result);

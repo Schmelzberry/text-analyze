@@ -58,3 +58,15 @@ const text = "Red! Red. I like red, green, and yellow.";
 const word = "Red";
 numberOfOccurrencesInText(word, text);
 Expected Output: 3
+
+Test: "It should return a word match regardless of case."
+Code:
+const text = "red RED Red green Green GREEN";
+const word = "Red";
+numberOfOccurrencesInText(word, text);
+Expected Output: 3
+
+Test" It should omit a specific word(zoinks) from a text passage."
+Code:
+const text = "zoinks this is wild, man.";
+const word = "zoinks";
